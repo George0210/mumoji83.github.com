@@ -14,13 +14,21 @@ body {
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background-color: #51c7cf;
 }
 .container h1 {
   margin-left: 1rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fa-bars {
+  color: transparent;
+  font-size: 30px;
 }
 
 .navbar {
@@ -52,10 +60,23 @@ body {
     min-height: 100vh;
   }
 
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1.3rem;
+  }
+
+  .fa-bars {
+    color: #fff;
+  }
+
   .navbar {
-    padding: 1.8rem;
+    position: absolute;
+  }
+
+  .navbar ul {
+    display: none;
   }
 
   
-
 }
