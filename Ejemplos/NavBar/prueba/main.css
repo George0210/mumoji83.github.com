@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: beige;
+}
+
+.container {
+  background-color: #51c7cf;
+}
+.container h1 {
+  margin-left: 1rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fa-bars {
+  color: transparent;
+  font-size: 30px;
+}
+
+.navbar {
+  padding: 1.3rem;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.navbar ul li a:hover {
+  color: #fff;
+}
+
+/* HEADER */
+
+/* HEADER */
+
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+header {
+  padding: 10px 40px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+header .logo {
+  height: 80px;
+}
+
+header .nav-bar {
+  display: none;
+}
+
+header .navbar ul {
+  list-style: none;
+  z-index: 1;
+}
+
+header .navbar ul li {
+  position: relative;
+  float: left;
+  
+}
+
+.fa-solid {
+  color: #fff;
+}
+
+.fa-bars {
+  font-size: 30px;
+}
+
+.fa-times {
+  font-size: 30px;
+}
+
+
+header .navbar ul li a {
+  font-size: 20px;
+  padding: 20px;
+  color: rgb(2, 157, 230);
+  letter-spacing: .1em;
+  display: block;
+  margin-left: 5px;
+  position: relative;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transition: .5;
+  -webkit-transition: .5;
+  -moz-transition: .5;
+  -ms-transition: .5;
+  -o-transition: .5;
+  overflow: hidden;
+  
+}
+
+header .navbar ul li a:hover {
+  color: rgb(203, 0, 230);
+}
+
+
+
+header .navbar ul li a span {
+  position: absolute;
+  background: rgb(0, 255, 255);
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+
+header .navbar ul li a span:nth-child(1) {
+  width: 100%;
+  height: 2px;
+  top: 0;
+  left: -100%;
+}
+
+header .navbar ul li a span:nth-child(2) {
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  right: -100%;
+}
+
+header .navbar ul li a span:nth-child(3) {
+  width: 2px;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
+}
+
+header .navbar ul li a span:nth-child(4) {
+  width: 2px;
+  height: 100%;
+  top: -100%;
+  right: 0;
+}
+
+header .navbar ul li a:hover span:nth-child(1) {
+  left: 0;
+}
+
+header .navbar ul li a:hover span:nth-child(2) {
+  right: 0;
+}
+
+header .navbar ul li a:hover span:nth-child(3) {
+  bottom: 0;
+}
+
+header .navbar ul li a:hover span:nth-child(4) {
+  top: 0;
+}
+
+
+header .navbar ul li ul {
+  position: absolute;
+  display: none;
+}
+
+header .navbar ul li ul li {
+  margin: 5px 0;
+  width: 100%;
+  margin: 10px 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+  display: initial;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 990px) {
+
+  body {
+    min-height: 100vh;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: 1.3rem;
+  }
+
+  .fa-bars {
+    color: #fff;
+  }
+
+  .navbar {
+    position: absolute;
+  }
+
+  .navbarc {
+    /* display: none; */
+    visibility: hidden;
+  }
+
+  /* HEADER */
+
+  
+  header {
+    padding: 20px;
+  }
+
+  header .nav-bar {
+    display: initial;
+    cursor: pointer;
+  }
+
+
+  header .navbar {
+    position: absolute;
+    top: 60px; left: 0; right: 0;
+    padding-top: 60px;
+    display: none;
+  }
+
+  
+
+  header .navbar ul li {
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    z-index: 1;
+  }
+  
+
+  header .navbar ul li a {
+    color: rgb(2, 157, 230);
+    font-weight: bold;
+    letter-spacing: .1em;
+    border-radius: 0%;
+    -webkit-border-radius: 0%;
+    -moz-border-radius: 0%;
+    -ms-border-radius: 0%;
+    -o-border-radius: 0%;
+}
+
+header .navbar ul li a:hover {
+  color: rgb(203, 0, 230);
+}
+
+  header .navbar ul li a span {
+    display: none;
+  }
+
+  header .navbar ul li:focus-within > ul,
+  header .navbar ul li:hover > ul {
+  display: none;
+}
+
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+
+  header .navbar ul li ul li {
+    margin: 0;
+  }
+  
+
+  
+}
